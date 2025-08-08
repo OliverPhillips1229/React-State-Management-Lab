@@ -1,42 +1,170 @@
 #root {
-  max-width: 1280px;
+  margin: 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+.app-container {
+  color: white;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.stats-container {
+  margin-bottom: 30px;
+}
+
+.stats-container h2,
+.stats-container h3 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin: 30px 0 15px 0;
+  color: #fff;
+}
+
+.team-message {
+  color: #ccc;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 15px 15px 20px 15px;
+  border-radius: 12px;
+  width: 200px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #3a3a3a;
+  /* Same dark color for all cards */
+  border: 2px solid #555;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fighter-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Fighter type colors for image backgrounds */
+/* Blue - Survivor */
+li:nth-child(1) .fighter-image {
+  background-color: #1e5ba8;
+}
+/* Green - Scavenger */
+li:nth-child(2) .fighter-image {
+  background-color: #2d7d32;
+}
+/* Gray - Shadow */
+li:nth-child(3) .fighter-image {
+  background-color: #455a64;
+}
+/* Purple - Tracker */
+li:nth-child(4) .fighter-image {
+  background-color: #6a4c93;
+}
+/* Brown - Sharpshooter */
+li:nth-child(5) .fighter-image {
+  background-color: #8d6e63;
+}
+/* Red-Orange - Medic */
+li:nth-child(6) .fighter-image {
+  background-color: #d84315;
+}
+/* Pink - Engineer */
+li:nth-child(7) .fighter-image {
+  background-color: #ad1457;
+}
+/* Olive - Brawler */
+li:nth-child(8) .fighter-image {
+  background-color: #558b2f;
+}
+/* Deep Purple - Infiltrator */
+li:nth-child(9) .fighter-image {
+  background-color: #7b1fa2;
+}
+/* Red - Leader */
+li:nth-child(10) .fighter-image {
+  background-color: #c62828;
 }
 
-.card {
-  padding: 2em;
+
+.fighter-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: white;
 }
 
-.read-the-docs {
-  color: #888;
+.fighter-stats {
+  margin: 5px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+}
+
+.fighter-button {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.fighter-button:hover {
+  background-color: #fff;
+  transform: none;
+}
+
+.remove-button {
+  background-color: #ff4444;
+  color: white;
+}
+
+.remove-button:hover {
+  background-color: #ff6666;
 }
